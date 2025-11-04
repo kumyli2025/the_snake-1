@@ -43,7 +43,7 @@ clock = pygame.time.Clock()
 class GameObject:
     """Это докстриг"""
 
-    def __init__(self, body_color: tuple,
+    def __init__(self, body_color: tuple = (255, 0, 0),
                  position: tuple = ((SCREEN_WIDTH // 2), (SCREEN_HEIGHT // 2))
                  ):
         self.position = position
@@ -59,7 +59,8 @@ class Apple(GameObject):
 
     def __init__(self, body_color=(255, 0, 0),
                  position=((SCREEN_WIDTH // 2), (SCREEN_HEIGHT // 2))):
-        super().__init__(body_color, position)
+        super().__init__(body_color=(255, 0, 0),
+                         position=((SCREEN_WIDTH // 2), (SCREEN_HEIGHT // 2)))
         self.body_color = (255, 0, 0)
         self.position = self.randomize_position()
 
